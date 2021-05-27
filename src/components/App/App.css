@@ -1,26 +1,34 @@
 .Term-container {
   margin-top: 1em;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  margin-left: 1em;
   font-size: calc(12px + 1vmin);
   color: #33ff00;
   text-align: left;
+  overflow-y: auto;
+  overflow-x: hidden;
+  cursor: text;
 }
 
 .Term-content {
-  max-width: 90vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.Prompt-area {
+  display: inline-flex;
+  width: 100%;
+  align-items: center;
 }
 
 .Prompt-text {
   text-transform: uppercase;
-  margin-left: 5px;
   font-family: inherit;
   font-size: inherit;
   color: inherit;
   background: transparent;
   border: 0px;
   outline: none;
+  width: 95%;
 }
 
 .Prompt {

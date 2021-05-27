@@ -6,6 +6,6 @@ function App() {
   return (
     <Terminal termPrompt=">" />
   );
-};
+}
 
 export default App;
