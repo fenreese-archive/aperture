@@ -10,12 +10,22 @@ type TermProps = {
 
 const Terminal = (props: TermProps) => {
   const [output, setOutput] = useState(<div/>);
+  const [isLogin, setIsLogin] = useState(false);
 
   const processCommand = (input: string) => {
     const filteredInput = input.toLowerCase();
 
-    if (filteredInput === "help") {
-      setOutput(Help);
+    switch(filteredInput) {
+      case "help": {
+        if (!isLogin) {
+          setOutput(Help);
+        }
+        break;
+      }
+      default: {
+        setOutput(<div/>);
+        break;
+      }
     }
   };
 
