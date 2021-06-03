@@ -22,9 +22,9 @@ const Prompt = (props: PromptProps) => {
           type="text"
           className="Prompt-text"
           name="input"
-          onChange={e => setInput(e.target.value)}
+          onChange = {e => setInput(e.target.value)}
           onKeyDown = {handleKeyPress}
-          value={input}
+          value = {input}
         />
       </div>
   );

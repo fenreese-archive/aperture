@@ -4,7 +4,7 @@ import Terminal from '../Terminal/Terminal';
 
 function App() {
   return (
-    <Terminal termPrompt=">" />
+    <Terminal/>
   );
 }
 

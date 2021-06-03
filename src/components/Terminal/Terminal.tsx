@@ -1,43 +1,21 @@
-import React, { useState } from 'react';
-import Prompt from './Prompt';
-import TermOutput from './TermOutput';
+import React, {useState} from 'react';
+import NotLoggedIn from "./NoUser";
+import LoginPrompt from "./LoginPrompt";
 
-import Help from '../Modules/Help';
-
-type TermProps = {
-  termPrompt?: string;
-}
-
-const Terminal = (props: TermProps) => {
-  const [output, setOutput] = useState(<div/>);
-  const [isLogin, setIsLogin] = useState(false);
-
-  const processCommand = (input: string) => {
-    const filteredInput = input.toLowerCase();
-
-    switch(filteredInput) {
-      case "help": {
-        if (!isLogin) {
-          setOutput(Help);
+const Terminal = () => {
+    const switchScenes = (command: string, currState: string) => {
+        if (command === "login" && currState === "logout") {
+            setCurrState(<LoginPrompt/>)
         }
-        break;
-      }
-      default: {
-        setOutput(<div/>);
-        break;
-      }
     }
-  };
+
+    const [CurrState, setCurrState] = useState(<NotLoggedIn
+        termPrompt=">"
+        switchScenes = {switchScenes}/>)
 
   return (
     <div className="Term-container">
-      <div className="Term-content">
-        <TermOutput contents ={output} />
-        <Prompt
-          termPrompt = {props.termPrompt}
-          processCommand = {processCommand}
-        />
-      </div>
+        {CurrState}
     </div>
   );
 };
