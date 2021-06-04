@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 import TermOutput from "./TermOutput";
 import Prompt from "./Prompt";
-import Help from "../Modules/Help";
+import {LoggedOffHelp} from "../Modules/Help";
 
 type StartProps = {
     termPrompt?: string;
@@ -16,7 +16,7 @@ const NotLoggedIn = (props: StartProps) => {
 
         switch(filteredInput) {
             case "help": {
-                setOutput(Help);
+                setOutput(LoggedOffHelp);
                 break;
             }
             case "login": {
