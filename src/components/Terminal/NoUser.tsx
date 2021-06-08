@@ -19,6 +19,7 @@ const NotLoggedIn = (props: StartProps) => {
                 setOutput(LoggedOffHelp);
                 break;
             }
+            case "logon":
             case "login": {
                 // switch to Login component
                 props.switchScenes(input, "logout");

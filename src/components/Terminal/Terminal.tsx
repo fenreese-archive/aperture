@@ -4,8 +4,7 @@ import LoginPrompt from "./LoginPrompt";
 import MainTerminal from "./MainTerminal";
 
 const Terminal = () => {
-    // for logged in (and if you're Cave Johnson)
-    // const [IsLoggedIn, setIsLoggedIn] = useState(false);
+    // for if you're Cave Johnson
     let isCave = false;
 
     const stateHandler = (command: string, currState: string) => {
@@ -18,7 +17,13 @@ const Terminal = () => {
         }
         else if (currState === "loggedin") {
             // setIsLoggedIn(true);
-            setCurrState(<MainTerminal isCave={isCave}/>)
+            setCurrState(<MainTerminal
+                headline={isCave ? "GLaDOS v1.07a (c) 1982 Aperture Science, Inc." :
+                    "GLaDOS v1.07a (c) 1982 Aperture Science, Inc."}
+                isCave={isCave}
+                termPrompt={isCave ? "ADMIN>" : "B:\\>"}
+                />
+            )
         }
     }
 

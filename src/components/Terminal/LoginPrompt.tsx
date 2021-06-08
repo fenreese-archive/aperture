@@ -7,7 +7,7 @@ type LoginProps = {
 
 const LoginPrompt = (props: LoginProps) => {
     let usernameEntered = false;
-    let isCave = true;
+    let isCave = false;
 
     const processCommand = (field: string) => {
         const filteredInput = field.toLowerCase();
