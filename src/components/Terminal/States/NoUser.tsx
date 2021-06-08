@@ -1,11 +1,11 @@
 import React, {useState} from 'react';
-import TermOutput from "./TermOutput";
-import Prompt from "./Prompt";
-import {LoggedOffHelp} from "../Modules/Help";
+import TermOutput from "../Components/TermOutput";
+import Prompt from "../Components/Prompt";
+import {LoggedOffHelp} from "../../Modules/Help";
 
 type StartProps = {
     termPrompt?: string;
-    switchScenes: (command: string, currState: string) => void;
+    switchScenes: (currState: string) => void;
 };
 
 const NotLoggedIn = (props: StartProps) => {
@@ -22,7 +22,7 @@ const NotLoggedIn = (props: StartProps) => {
             case "logon":
             case "login": {
                 // switch to Login component
-                props.switchScenes(input, "logout");
+                props.switchScenes("logout");
                 break;
             }
             default: {

@@ -8,10 +8,43 @@ const LoggedOffHelp = (
   </div>
 );
 
-const MainHelp = (
+const AdminHelp = (
     <div>
-        <p>uwu</p>
+        <ul>
+            <p>LIB</p>
+            <li>NOTES</li>
+            <li>APPEND</li>
+            <li>ATTRIB</li>
+            <li>COPY</li>
+            <li>DIR</li>
+            <li>ERASE</li>
+            <li>FORMAT</li>
+            <li>INTERROGATE</li>
+            <li>LIB</li>
+            <li>PLAY</li>
+            <li>RENAME</li>
+            <li>TAPEDISK</li>
+        </ul>
     </div>
 );
 
-export {LoggedOffHelp, MainHelp};
+const UserHelp = (
+    <div>
+        <ul>
+            <p>LIB</p>
+            <li>APPEND</li>
+            <li>ATTRIB</li>
+            <li>COPY</li>
+            <li>DIR</li>
+            <li>ERASE</li>
+            <li>FORMAT</li>
+            <li>INTERROGATE</li>
+            <li>LIB</li>
+            <li>PLAY</li>
+            <li>RENAME</li>
+            <li>TAPEDISK</li>
+        </ul>
+    </div>
+)
+
+export {LoggedOffHelp, AdminHelp, UserHelp};

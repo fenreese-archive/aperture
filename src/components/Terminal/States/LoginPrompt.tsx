@@ -1,8 +1,8 @@
 import React, {useState} from 'react';
-import Prompt from "./Prompt";
+import Prompt from "../Components/Prompt";
 
 type LoginProps = {
-    handleInput: (command: string, currState: string) => void;
+    handleInput: (currState: string) => void;
 }
 
 const LoginPrompt = (props: LoginProps) => {
@@ -22,12 +22,12 @@ const LoginPrompt = (props: LoginProps) => {
             }
 
             if (matchString.includes(filteredInput)) {
-                props.handleInput(field, "loggedin");
+                props.handleInput("loggedin");
             }
         // Entering username
         } else {
             if (filteredInput === "cjohnson") {
-                props.handleInput(field, "loggingin");
+                props.handleInput("iscave");
                 isCave = true;
             }
             usernameEntered = true;
