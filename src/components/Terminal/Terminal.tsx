@@ -17,7 +17,7 @@ const Terminal = () => {
     // for if you're Cave Johnson
     let isCave = false;
 
-    const stateHandler = (currState: string) => {
+    const stateHandler = (currState: string, uid?: string) => {
         switch (currState) {
             case "logout": {
                 setCurrState(<LoginPrompt

@@ -9,7 +9,7 @@ type MainProps = {
     isCave: boolean;
     termPrompt: string;
     uid: string;
-    handleInput: (currState: string) => void;
+    handleInput: (currState: string, uid?: string) => void;
 }
 
 const MainTerminal = (props: MainProps) => {
@@ -94,7 +94,7 @@ const MainTerminal = (props: MainProps) => {
             // application
             case "apply":
             case "apply.exe": {
-                props.handleInput("application");
+                props.handleInput("application", props.uid);
                 break;
             }
             // the Secret Command
