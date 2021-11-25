@@ -1,6 +1,6 @@
-# Getting Started with Create React App
+# Aperture Science 
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A (now archived, no longer working on it) recreation of [Valve's Aperture Science website.](https://valvearchive.com/web_archive/aperturescience.com/), with React and TypeScript.
 
 ## Available Scripts
 
